@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+
+	<style>
+		.root{
+			padding: 15px;
+			background: pink;
+		}
+		.d1{
+			background: cyan;
+			width: 200px;
+			height: 100px;
+			z-index: 5;
+			position: relative;
+		}
+		.d2{
+			background: #ffaaff;
+			width: 400px;
+			height: 100px;
+			position: relative;
+			/*top: -100px;*/
+		}
+	</style>
+</head>
+<body>
+
+	<div class="root">
+		<div class="d1"></div>
+		<div class="d2"></div>
+	</div>
+	<style>
+	</style>
+	<script>
+		let d = document.querySelector('.d1')
+		let g = {left: 0};
+		setInterval(()=>{
+			// d.style.left = g.left + 'px';
+			g.left += 15;
+		}, 100)
+	</script>
+</body>
+</html>

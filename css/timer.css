@@ -1,0 +1,44 @@
+#timer .timeline .line{
+	background: white;
+	height: 20px;
+	min-width: 500px;
+	width: 70vw;
+}
+
+#timer .timeline .scalable-block{
+	height: 100%;
+	background: #a71e28;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	width: 40px;
+}
+
+#timer .images{
+	position: relative;
+	height: 100px;
+	overflow: hidden;
+}
+
+#timer #human{
+	position: absolute;
+	right: 0px;
+}
+
+#timer #death{
+	position: absolute;
+	left: -125px;
+	z-index: 1;
+	background-color: transparent;
+}
+
+
+#timer .btns{
+	margin-top: 50px;
+}
+
+#timer .back-btn{
+	opacity: 0.15;
+}
+#timer .back-btn:hover{
+	opacity: 1;
+}

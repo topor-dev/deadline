@@ -1,0 +1,5 @@
+#settings label{
+	cursor: pointer;
+	-moz-user-select: none;
+	user-select: none;
+}

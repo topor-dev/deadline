@@ -1,0 +1,33 @@
+html, body, *{
+	background: black;
+	color: white;
+}
+
+.hidden{
+	display: none;
+}
+
+body{
+	min-height: 60vh;
+}
+
+body, #root{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#root{
+	width: 80vw;
+}
+
+.deadline-text{
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+}
+
+.red-text{
+	color: #980002;
+}

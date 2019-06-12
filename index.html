@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>DeadLine</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/settings.css">
+	<link rel="stylesheet" href="css/timer.css">
+</head>
+<body>
+	<div class="deadline-text">
+		<span class="red-text">Dead</span><span>line</span>
+	</div>
+	<div id="root">
+		<div id="settings" class="">
+			<form>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" name="type" id="radio2" value="to" checked=""/>
+					<label for="radio2" class="form-check-label" title="e.g. after 5 min">after time</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" name="type" id="radio1" value="at"/>
+					<label for="radio1" class="form-check-label" title="e.g. at 12:00">at time</label>
+				</div>
+				<div class="form-group">
+					<label for="time">HH:MM[:SS]</label>
+					<input type="text" id="time" name="time" pattern="([01]?[0-9]|2[0-3]):[0-5]?[0-9](:[0-5]?[0-9])?" placeholder="23:59:59 or 23:59" value="0:15" required=""/>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block btn-dark">Start new countdown</button>
+			</form>
+			<hr/>
+			<button class="back-btn btn btn-primary btn-block btn-dark hidden">Back to deadline</button>
+		</div>
+		<div id="timer" class="hidden">
+			<div class="timeline">
+				<div class="images">
+					<img src="img/death.png" alt="" id="death"/>
+					<img src="img/human.png" alt="" id="human"/>
+				</div>
+				<div class="line">
+					<div class="scalable-block"></div>
+				</div>
+			</div>
+			<div class="btns">
+				<button class="back-btn btn btn-primary btn-inline btn-dark">Back to settings</button>
+				<button class="back-btn btn btn-primary btn-inline btn-dark" onclick="document.location.search=''">Reset</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/router.js"></script>
+	<script src="js/timer.js"></script>
+</body>
+</html>
